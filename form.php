@@ -6,38 +6,36 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <form action="" id="form1"> -->
+    <form id="form1">
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name"><br>
-        <label for="number">number:</label><br>
+        <label for="number">Number:</label><br>
         <input type="text" id="number" name="number"><br>
-        <button type="submit" onclick="check()">submit</button>
+        <button type="button" onclick="check()">Submit</button>
         <script>
             function check() {
-                console.log("TEST");
-                let f = document.getElementById("name").value; console.log(f);
-                let n = document.getElementById("number").value; console.log(n);
+                let f = document.getElementById("name").value.trim();
+                let n = document.getElementById("number").value.trim();
 
-                // let checkstring = f.name.match("^[A-Za-z][A-Za-z]$"); console.log(checkstring);
-                // let checknumber = f.number.match("^[0-9]$"); console.log(checknumber);
-
-                if(f && n == ""){
+                if (f === "" || n === "") {
                     alert("Do not enter blank values.");
                     return false;
-                } 
-                if (isNaN(f)) {
-                    alert("please not enter number input 2");
-                    console.log("please enter name");
+                }
+
+                if (!isNaN(f)) {
+                    alert("Please enter a valid name (not a number).");
+                    console.log("Please enter name");
                     return false;
                 }
+
                 if (isNaN(n)) {
-                    alert("only enter number input 1");
-                    console.log("please enter number");
+                    alert("Please enter a valid number.");
+                    console.log("Please enter number");
                     return false;
                 }
-                // alert("name: " + checkstring + "number: " + checknumber)
+                alert("Form submitted successfully!");
             }
         </script>
-    <!-- </form> -->
+    </form>
 </body>
 </html>

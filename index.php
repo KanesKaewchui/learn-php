@@ -76,13 +76,6 @@
                     document.write("<hr> Min =" + min + "Max = " + max);
                 </script>
             </div>
-            <div id="check">
-                    <script>
-                        function name(params) {
-                            
-                        }
-                    </script>
-            </div>
         </div>
     </header>
     <footer>
