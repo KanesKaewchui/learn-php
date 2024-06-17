@@ -40,8 +40,8 @@
         console.log(arr2);
         document.write("result: " + arr1 + "<br>");
         document.write("result: " + arr2 + "<br>");
-        // document.write("result: " + arr2 );
-        document.write("result1: " + arr1 + "  result2: " +  arr2 );
+        let combyArray = arr1.concat(arr2);
+        document.write("Combined result: " + combyArray);
     </script>
 </body>
 </html>
