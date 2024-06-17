@@ -1,0 +1,22 @@
+    <!-- <div style="text-align:center">TEST</div>
+    <div style="text-align:left"><h2>TEST</h2></div>
+    <div style="text-align:right"><h3>TEST</h3></div> -->
+    <!-- <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Detail</th>
+            <a href="http://google.com" target="_blank" rel="noopener noreferrer">google</a>
+            <br>
+            <a href="http://youtube.com" target="_blank" rel="noopener noreferrer">youtube</a>
+        </tr>
+        <tr>
+            <td>1</td>
+        </tr>
+    </table> -->
+    <!-- <div>    
+        <form action="POST.php" method="POST"></form>
+        <label for="">input</label>
+        <input type="text" id="fame" name="fname" value=""><br>
+        <input type="submit" value="OK">
+    </div> -->
