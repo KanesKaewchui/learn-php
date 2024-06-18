@@ -29,67 +29,27 @@
     <main class="Content h-screen p-5">
         <div id="home" class="page">
             <h1>HOME</h1>
-            <p>Welcome to the homepage!</p>
+            <p>homepage!</p>
             <div class="overflow-x-auto">
                 <table class="min-w-full bg-white">
                     <thead>
                         <tr class="w-full bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
                             <th class="py-2 px-6 text-left w-5">Name</th>
-                            <th class="py-3 px-6 text-left ">Email</th>
-                            <th class="py-3 px-6 text-left ">Phone</th>
-                            <th class="py-3 px-6 text-left ">Id</th>
-                            <th class="py-3 px-6 text-left ">img</th>
+                            <th class="py-3 px-6 text-left">Email</th>
+                            <th class="py-3 px-6 text-left">Phone</th>
+                            <th class="py-3 px-6 text-left">Id</th>
+                            <th class="py-3 px-6 text-left">img</th>
                         </tr>
                     </thead>
                     <tbody class="text-gray-600 text-sm font-light">
                         <tr class="border-b border-gray-200 hover:bg-gray-100">
-                            <td class="py-2 px-6 text-left ">AAAAAAAAAA</td>
+                            <td class="py-2 px-6 text-left">AAAAAAAAAA</td>
                             <td class="py-2 px-6 text-left">A.com</td>
                             <td class="py-2 px-6 text-left">123-456-7890</td>
                             <td class="py-2 px-6 text-left">123-456-7890</td>
                             <td class="py-2 px-6">
                                 <img src="https://s2.coinmarketcap.com/static/img/coins/200x200/1808.png" 
-                                alt="Image Description" class="w-8 h-8 rounded-full">
-                            </td>
-                        </tr>
-                        <tr class="border-b border-gray-200 hover:bg-gray-100">
-                            <td class="py-2 px-6 text-left">A</td>
-                            <td class="py-3 px-6 text-left">A.com</td>
-                            <td class="py-2 px-6 text-left">123-456-7890</td>
-                            <td class="py-2 px-6 text-left">123-456-7890</td>
-                            <td class="py-2 px-6">
-                                <img src="https://s2.coinmarketcap.com/static/img/coins/200x200/1808.png" 
-                                alt="Image Description" class="w-8 h-8 rounded-full">
-                            </td>
-                        </tr>
-                        <tr class="border-b border-gray-200 hover:bg-gray-100">
-                            <td class="py-2 px-6 text-left ">A</td>
-                            <td class="py-2 px-6 text-left">A.com</td>
-                            <td class="py-2 px-6 text-left">123-456-7890</td>
-                            <td class="py-2 px-6 text-left">123-456-7890</td>
-                            <td class="py-2 px-6">
-                                <img src="https://s2.coinmarketcap.com/static/img/coins/200x200/1808.png" 
-                                alt="Image Description" class="w-8 h-8 rounded-full">
-                            </td>
-                        </tr>
-                        <tr class="border-b border-gray-200 hover:bg-gray-100">
-                            <td class="py-2 px-6 text-left">A</td>
-                            <td class="py-2 px-6 text-left">A.com</td>
-                            <td class="py-2 px-6 text-left">123-456-7890</td>
-                            <td class="py-2 px-6 text-left">123-456-7890</td>
-                            <td class="py-2 px-6">
-                                <img src="https://s2.coinmarketcap.com/static/img/coins/200x200/1808.png" 
-                                alt="Image Description" class="w-8 h-8 rounded-full">
-                            </td>
-                        </tr>
-                        <tr class="border-b border-gray-200 hover:bg-gray-100">
-                            <td class="py-2 px-6 text-left">A</td>
-                            <td class="py-2 px-6 text-left">A.com</td>
-                            <td class="py-2 px-6 text-left">123-456-7890</td>
-                            <td class="py-2 px-6 text-left">123-456-7890</td>
-                            <td class="py-2 px-6">
-                                <img src="https://s2.coinmarketcap.com/static/img/coins/200x200/1808.png" 
-                                alt="Image Description" class="w-8 h-8 rounded-full">
+                                     alt="Image Description" class="w-8 h-8 rounded-full">
                             </td>
                         </tr>
                     </tbody>
@@ -98,11 +58,11 @@
         </div>
         <div id="about" class="page hidden">
             <h1>ABOUT</h1>
-            <p>About us content goes here.</p>
+            <p>About!</p>
         </div>
         <div id="contact" class="page hidden">
             <h1>CONTACT</h1>
-            <p>Contact us content goes here.</p>
+            <p>Contact!</p>
         </div>
         <button class="bg-blue-500 text-white px-4 py-2 mt-4" id="theme-switcher">
             Theme
@@ -113,6 +73,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
