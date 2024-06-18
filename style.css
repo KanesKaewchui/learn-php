@@ -1,30 +1,3 @@
-/* h1{
-    background-color: green;
-    text-align: center;
-} */
-.nav{
-    background-color: black;
-    width: 100%;
-    color: white;
-}
-ul{
-    list-style: none;
-}
-li{
-    padding: 10px;
-    display: inline;
-}
-.body{
-    display: flex;
-    flex-direction: column;
-}
-.body input{
-    background-color: aqua;
-    /* border: 0.5px; */
-    width: 60px;
-    height: 30px;
-}
-footer{
-    background-color: black;
-    color: white;
+h1{
+    
 }
