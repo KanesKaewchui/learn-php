@@ -21,5 +21,10 @@
             echo "Email: " . $this->email . "<br>";
         }
     }
+
+    class mysql{
+        
+    }
 ?>
+
 
