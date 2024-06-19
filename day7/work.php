@@ -23,11 +23,28 @@
 ?>
 
 <?php
-    include "./function/function4.php";
+    // include "./function/function4.php";
     // echo randomint();
     // echo back();
+?>
+
+<?php
+    // include "./function/function5.php";
     // echo arraytest();
+?>
+
+<?php
+    // include "./function/function6.php";
     // echo arrayrandom();
-    echo triangle();
+?>
+
+<?php
+    // include "./function/function7.php";
+    // echo triangle();
+?>
+
+<?php
+    include "./function/function8.php";
+    echo showDate(6);
 ?>
 
