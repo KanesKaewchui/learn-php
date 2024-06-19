@@ -7,6 +7,7 @@
 
     $json = $_SESSION["api_data"];
     $input_value = $_SESSION["input_value"];
+    
 
     echo "<h2>ข้อมูลจาก API</h2>";
 

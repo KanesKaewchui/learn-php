@@ -18,7 +18,7 @@
         
         header("Location: work3.php");
         exit();
-}
+    }
 ?>
 
 <!DOCTYPE html>
