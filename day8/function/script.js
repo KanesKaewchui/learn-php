@@ -1,6 +1,8 @@
 function validateForm() {
     var username = document.getElementById('Username').value;
     var password = document.getElementById('Password').value;
+    var name = document.getElementById('Name').value;
+    var date = document.getElementById('date').value;
 
     var usernameRegex = /^[a-zA-Z]{8,12}$/;
     if (!usernameRegex.test(username)) {
@@ -21,6 +23,24 @@ function validateForm() {
         return false;
     }
 
+    if (name === "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Name is wrong',
+            text: 'Name cannot be empty.'
+        });
+        return false;
+    }
+
+    if (date === "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Date is wrong',
+            text: 'Please select a date.'
+        });
+        return false;
+    }
+
     var form = document.getElementById('numberForm');
     var formData = new FormData(form);
 
@@ -32,11 +52,12 @@ function validateForm() {
         contentType: false,
         dataType: 'json',
         success: function(response) {
+            console.log(response);
             if (response.success) {
                 Swal.fire({
                     icon: 'success',
                     title: 'Success',
-                    text: 'Username: ' + response.message
+                    text: 'Username: ' + response.message + '\nPassword: ' + password + '\nName: ' + name + '\nDate: ' + date
                 });
             } else {
                 Swal.fire({
