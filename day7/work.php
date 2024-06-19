@@ -44,7 +44,16 @@
 ?>
 
 <?php
-    include "./function/function8.php";
-    echo showDate(6);
+    // include "./function/function8.php";
+    // echo showDate(2, 2, 5, 10, 5, 6);
+?>
+
+<?php
+    include "./function/function9.php";
+    echo get_ip();
+?>
+
+<?php
+    // include "./function/function10.php";
 ?>
 
