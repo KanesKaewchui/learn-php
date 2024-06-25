@@ -25,3 +25,32 @@
 //     console.log(b);
 // }
 
+const mysql = require('mysql2/promise')
+const dbconfig = require('../db/db')
+
+let pool;
+
+async function data() {
+    try {
+      pool = await mysql.createPool(dbconfig.mysqlconfig);
+      const connection = await pool.getConnection();
+      console.log('database connection successful');
+      connection.release();
+    } catch (error) {
+      console.error('Error connecting to the database:',error);
+    }
+  }
+
+  async function user() {
+    try{
+        const [rows] = await pool.query('SELECT * FROM register ');
+        return rows;
+      } catch (error) {
+        console.log('Error connecting to the database',error);
+        throw error;
+      }
+  }
+
+  module.exports = {data,user};
+
+

@@ -62,11 +62,18 @@
         $layers = intval($_POST["layers"]);
         if ($layers >= 5 && $layers <= 50) {
             for ($i = 0; $i < $layers; $i++) {
-                for ($j = 0; $j <= $i; $j++) {
-                    echo "X";
-                }
-                for ($j = $i % 5; $j < $layers; $j++) {
-                    echo "O";
+                if ($i % 5 == 0) {
+                    for ($j = 1; $j <= $i; $j++) {
+                        echo "O";
+                    }
+                } else {
+                    for ($j = 1; $j <= $i; $j++) {
+                        if ($j == 5) {
+                            echo "O";
+                        } else {
+                            echo "X";
+                        }
+                    }
                 }
                 echo "<br>";
             }
