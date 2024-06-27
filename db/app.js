@@ -3,6 +3,7 @@ const req = require('express/lib/request')
 const res = require('express/lib/response')
 const {data,user,usersid} = require('../fun/fun');
 const md5 = require('md5');
+const { default: axios } = require('axios');
 const app = express()
 const port = 3000
 
@@ -49,6 +50,122 @@ data().then(() => {
         res.status(500).send('Error database')
     }
   });
+
+  app.post('/usernode',async(req, res) =>{
+    const getid = req.body.id;
+    const headertest = req.get('test');
+    console.log(getid); 
+    console.log(headertest); 
+    axios.post('http://localhost:8080/Service/nodeuser', {
+      id: getid
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+        'test': headertest
+      }
+    }
+  ).then (function (response) {
+    console.log(response.data);
+    res.status(200).json(response.data)
+  }).catch(function (error) {
+    console.log(error);
+  }
+  )
+  });
+
+
+  app.post('/userunknow',async(req, res) =>{
+  const userid = "123456,fluke"
+  const chacksum = md5('fullss4'+'123456'+'3E1SOVUNQX@_2024'+'apiphp'+'fluke')
+    axios.post('https://snap-england-cambridge-societies.trycloudflare.com/test/api_v1', {
+      userid: userid,
+      chksum : chacksum,
+      key_api: '3E1SOVUNQX@_2024'
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    }
+  ).then (function (response) {
+    console.log(response.data);
+    res.status(200).json(response.data)
+  }).catch(function (error) {
+    console.log(error);
+  }
+  )
+  });
+
+  app.post('/userunknow',async(req, res) =>{
+    const userid = "123456,fluke"
+    const chacksum = md5('fullss4'+'123456'+'3E1SOVUNQX@_2024'+'apiphp'+'fluke')
+      axios.post('https://snap-england-cambridge-societies.trycloudflare.com/test/api_v1', {
+        userid: userid,
+        chksum : chacksum,
+        key_api: '3E1SOVUNQX@_2024'
+      }, {
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      }
+    ).then (function (response) {
+      console.log(response.data);
+      
+      const md5_userid = md5(response.data.userid);
+      const list = {
+      md5_userid: md5_userid,
+      code: response.data.code,
+      name: response.data.name
+      };
+
+
+      axios.post('https://snap-england-cambridge-societies.trycloudflare.com/test/api_v2',list,{
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      }
+    ).then (function (response2) {
+      console.log(response2.data);
+      res.status(200).json({
+        md5_userid: md5_userid,
+        code: response1.data.code,
+        name: response1.data.name
+      });
+    }).catch(function (error) {
+      console.log(error);
+    }
+    )
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }).catch(function (error) {
+      console.log(error);
+    }
+    )
+    });
+
+        // then(function (response2) {
+    //   axios.post('https://snap-england-cambridge-societies.trycloudflare.com/test/api_v2',{
+    //     md5_userid: response2.data,
+    //     code : response2.code,
+    //     name: response2.name
+    //   })
+    // })
+    //   console.log(response2.code);
+    //   res.status(200).json(response.data)
+
+
+
+
 
   
   app.get('*', (req, res) => {
